@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -23,7 +22,6 @@
       text-shadow: 0 0 15px red, 0 0 30px crimson;
       animation: heartbeat 1.5s infinite;
       text-align: center;
-      padding-bottom: 3rem; /* Dejamos espacio para el iframe */
     }
     @keyframes heartbeat {
       0%, 100% { transform: scale(1); }
@@ -46,17 +44,15 @@
   </style>
 </head>
 <body>
-  <div>
-    <h1>❤️ Te amo Val ❤️</h1>
-    <!-- Reproductor de YouTube -->
-    <iframe width="320" height="180"
-      src="https://www.youtube.com/embed/XpPRXTAUw_o?autoplay=1&loop=1&playlist=XpPRXTAUw_o"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-      style="border-radius:12px; display:block; margin:0 auto;">
-    </iframe>
-  </div>
+  <h1>❤️ Te amo Val ❤️</h1>
+
+  <iframe width="320" height="180"
+    src="https://www.youtube.com/embed/XpPRXTAUw_o?autoplay=1&loop=1&playlist=XpPRXTAUw_o"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+    style="border-radius:12px; display:block; margin:20px auto;">
+  </iframe>
 
   <script>
     function createHeart() {
@@ -67,10 +63,4 @@
       heart.style.fontSize = (Math.random() * 20 + 20) + "px";
       heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
       document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 6000);
-    }
-    setInterval(createHeart, 300);
-  </script>
-</body>
-</html>
-
+      setTimeout(() => heart
