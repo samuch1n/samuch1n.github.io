@@ -17,23 +17,22 @@
 
     h1 {
       font-size: 60px;
-      color: red;
-      text-shadow: 0 0 20px pink, 0 0 40px red;
+      color: #ff4da6;
+      text-shadow: 0 0 20px pink, 0 0 40px #ff4da6;
       animation: glow 2s infinite alternate;
       z-index: 10;
       position: relative;
     }
 
     @keyframes glow {
-      from { text-shadow: 0 0 10px pink, 0 0 20px red; }
-      to   { text-shadow: 0 0 20px red, 0 0 40px pink; }
+      from { text-shadow: 0 0 10px pink, 0 0 20px #ff4da6; }
+      to   { text-shadow: 0 0 20px #ff4da6, 0 0 40px pink; }
     }
 
     .heart {
       position: fixed;
       top: -10vh;
-      color: red;
-      font-size: 24px;
+      font-size: 28px;
       animation: fall linear forwards;
       pointer-events: none;
     }
@@ -47,7 +46,7 @@
   </style>
 </head>
 <body>
-  <h1>❤️ Te amo Val ❤️</h1>
+  <h1>💘 Te amo Val 💘</h1>
 
   <!-- Música de YouTube oculta -->
   <iframe width="0" height="0" 
@@ -60,8 +59,9 @@
     function createHeart() {
       const heart = document.createElement("div");
       heart.classList.add("heart");
-      heart.innerHTML = "❤️";
+      heart.innerHTML = "💘";
       heart.style.left = Math.random() * 100 + "vw";
+      heart.style.color = "#ff4da6";
       heart.style.animationDuration = (3 + Math.random() * 4) + "s";
       document.body.appendChild(heart);
       setTimeout(() => { heart.remove(); }, 7000);
